@@ -8,62 +8,100 @@
     <title>Intro component with sign up form | YoussefTadarti</title>
     <!-- css style -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
   </head>
   <body>
-    <main class="container sections-direction">
-      <section>
-        <h1>Learn to code by watching others</h1>
+    <main class="container">
+      <section class="intro">
+        <h1 class="title">Learn to code by watching others</h1>
         <p>
           See how experienced developers solve problems in real-time. Watching
           scripted tutorials is great, but understanding how developers think is
           invaluable.
         </p>
       </section>
-      <section class="left-section">
+      <section class="sign-up">
+        <!-- banner -->
         <div class="box">
-          Try it free 7 days
-          <span class="box-small-text">
-            then <span class="block">$20/mo. thereafter</span>
-          </span>
+          <span>Try it free 7 days </span>then
+          <span class="block"> $20/mo. thereafter</span>
         </div>
-        <form class="form-content" action="#">
-          <input
-            type="text"
-            name="f_name"
-            id="f_name"
-            placeholder="First Name"
-          />
-          <input
-            type="text"
-            name="l-name"
-            id="l-name"
-            placeholder="Last Name"
-          />
-          <input
-            type="text"
-            name="email"
-            id="email"
-            placeholder="Email Address"
-          />
-          <input
-            type="text"
-            name="password"
-            id="password"
-            placeholder="Password"
-          />
-          <input
+        <!-- sign-up-form -->
+        <form id="form" name="form" class="box form-box" action="#">
+          <div class="form-group">
+            <label for="f_name" class="sr-only">First Name</label>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <input
+              name="f_name"
+              type="text"
+              id="f_name"
+              placeholder="First Name"
+            />
+            <small class="error-msg"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="f_name" class="sr-only">Last Name</label>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <input
+              name="l_name"
+              type="text"
+              id="l_name"
+              placeholder="Last Name"
+            />
+            <small class="error-msg"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="sr-only">Email Address</label>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <input
+              name="email"
+              type="text"
+              id="email"
+              placeholder="Email Address"
+            />
+            <small class="error-msg"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="sr-only">Password</label>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <input
+              name="pasword"
+              type="password"
+              id="password"
+              placeholder="Password"
+            />
+            <small class="error-msg"></small>
+          </div>
+
+          <button
+            name="submit-btn"
             class="submit-btn"
+            id="submit-btn"
             type="submit"
-            value="Claim your free trial"
-          />
+          >
+            Claim your free trial
+          </button>
+
           <footer>
             <p class="footer-paragraph">
               By clicking the button, you are agreeing to our
-              <span class="important">Terms and Services</span>
+              <a href="#" class="important">Terms and Services</a>
             </p>
           </footer>
         </form>
       </section>
     </main>
+    <script src="script/script.js"></script>
   </body>
 </html>
